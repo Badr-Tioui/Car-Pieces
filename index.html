@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="logo">
       <img src="./images/logo.png" alt="AutoService Logo">
@@ -43,7 +42,6 @@
     </div>
   </header>
 
-  <!-- SLIDESHOW -->
   <section class="slideshow">
     <div class="slide" style="background-image: url('./images/2023-BMW-M4-CSL-001-2160.jpg');"></div>
     <div class="slide" style="background-image: url('./images/2025-Cupra-Tindaya-Concept-004-2160.jpg');"></div>
@@ -51,16 +49,13 @@
     <div class="slide" style="background-image: url('./images/2026-Shelby-Super-Snake-R-006-2160.jpg');"></div>
   </section>
 
-  <!-- OVERLAY -->
   <div class="overlay">
    <button class="explore-btn" onclick="document.querySelector('#parts-section').scrollIntoView({ behavior: 'smooth' });">
    Explore
 </button>
-
   </div>
 
   <script>
-    // Dark/Light Mode Toggle
     const toggle = document.getElementById('theme-toggle');
     toggle.addEventListener('change', () => {
       document.body.classList.toggle('dark-mode', toggle.checked);
@@ -98,7 +93,6 @@
   const navLinks = document.querySelectorAll(".nav a");
   const exploreBtn = document.querySelector(".explore-btn");
 
-  // Function to switch language
   function switchLanguage(lang) {
     const t = translations[lang];
     navLinks[0].textContent = t.home;
@@ -108,7 +102,6 @@
     navLinks[4].textContent = t.contact;
     exploreBtn.textContent = t.explore;
 
-    // Change direction for Arabic
     if (lang === "ar") {
       document.body.dir = "rtl";
     } else {
@@ -116,12 +109,10 @@
     }
   }
 
-  // Listen for change
   langSelect.addEventListener("change", () => {
     switchLanguage(langSelect.value);
   });
 </script>
-
 
 </body>
 </html>

@@ -1,6 +1,3 @@
-/* ------------------------------------
-   GLOBAL RESET & BASE STYLES
------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +11,6 @@ body {
   transition: background 0.4s, color 0.4s;
 }
 
-/* ------------------------------------
-   HEADER
------------------------------------- */
 .header {
   display: flex;
   justify-content: space-between;
@@ -29,7 +23,6 @@ body {
   z-index: 10;
 }
 
-/* --- Logo & Brand Name --- */
 .logo {
   display: flex;
   align-items: center;
@@ -64,12 +57,10 @@ body {
   font-size: 2.6rem;
 }
 
-/* Change the word "Service" in dark mode */
 body.dark-mode .brand-name .service {
   color: #fff;
 }
 
-/* --- Navigation --- */
 .nav {
   flex: 1;
   display: flex;
@@ -95,7 +86,6 @@ body.dark-mode .brand-name .service {
   transform: scale(1.05);
 }
 
-/* --- Header Right Section (Cart + Theme + Language) --- */
 .header-right {
   display: flex;
   align-items: center;
@@ -103,7 +93,6 @@ body.dark-mode .brand-name .service {
   font-size: 1.5rem;
 }
 
-/* Cart Icon */
 .cart-icon {
   cursor: pointer;
   transition: transform 0.2s;
@@ -113,7 +102,6 @@ body.dark-mode .brand-name .service {
   transform: scale(1.1);
 }
 
-/* Language Selector */
 .language-selector select {
   background: #fff;
   color: #333;
@@ -130,7 +118,6 @@ body.dark-mode .brand-name .service {
   color: #fff;
 }
 
-/* Dark mode styles for header text and language selector */
 body.dark-mode .header {
   background-color: #000;
   border-bottom: 2px solid #fff;
@@ -151,9 +138,6 @@ body.dark-mode .language-selector select:hover {
   color: #000;
 }
 
-/* ------------------------------------
-   THEME SWITCH (Clean Sun/Moon Style)
------------------------------------- */
 .theme-switch {
   position: relative;
   display: inline-block;
@@ -167,18 +151,16 @@ body.dark-mode .language-selector select:hover {
   height: 0;
 }
 
-/* Background track */
 .slider {
   position: absolute;
   cursor: pointer;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #2e2b2b; /* dark tone */
+  background-color: #2e2b2b;
   border-radius: 50px;
   transition: background 0.4s;
   overflow: hidden;
 }
 
-/* Knob */
 .slider::before {
   content: "";
   position: absolute;
@@ -192,7 +174,6 @@ body.dark-mode .language-selector select:hover {
   z-index: 2;
 }
 
-/* SUN (light mode) */
 .slider::after {
   content: "";
   position: absolute;
@@ -216,7 +197,6 @@ body.dark-mode .language-selector select:hover {
   opacity: 1;
 }
 
-/* MOON (dark mode) */
 input:checked + .slider::after {
   width: 10px;
   height: 10px;
@@ -226,24 +206,17 @@ input:checked + .slider::after {
   left: auto;
   right: 8px;
   transform: translateY(-50%) translateX(2px);
-  /* create moon crescent effect */
   box-shadow: -4px 0 0 0 #2e2b2b;
 }
 
-/* Move knob */
 input:checked + .slider::before {
   transform: translateX(24px);
 }
 
-/* Hover glow */
 .theme-switch:hover .slider {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
-
-/* ------------------------------------
-   SLIDESHOW
------------------------------------- */
 .slideshow {
   position: relative;
   width: 100%;
@@ -276,9 +249,6 @@ input:checked + .slider::before {
   100% { opacity: 0; }
 }
 
-/* ------------------------------------
-   OVERLAY + EXPLORE BUTTON
------------------------------------- */
 .overlay {
   position: absolute;
   top: 0;
@@ -312,7 +282,6 @@ input:checked + .slider::before {
   background: linear-gradient(135deg, #ff5b40, #ff2a20);
 }
 
-/* Dark mode button */
 body.dark-mode .explore-btn {
   background: #fff;
   color: #000;
